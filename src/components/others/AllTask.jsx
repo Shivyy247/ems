@@ -17,9 +17,9 @@ const AllTask = () => {
       </div>
 
       <div className=' overflow-auto'>
-        {authData.employees.map(function (elem) {
+        {authData.employees.map(function (elem,idx) {
           return (
-            <div className="bg-blue-500 mb-2  py-2 px-4 flex justify-between rounded ">
+            <div key={idx}  className="bg-blue-500 mb-2  py-2 px-4 flex justify-between rounded ">
               <h2 className="text-lg font-semibold w-1/5 text-blue-950">{elem.firstname}</h2>
               <h3 className="text-lg font-semibold w-1/5 text-blue-800">{elem.taskNumber.newTask} </h3>
               <h5 className="text-lg font-semibold w-1/5 text-blue-800">{elem.taskNumber.active}</h5>
